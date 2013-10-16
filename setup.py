@@ -29,17 +29,16 @@ def find_version(*parts):
         return str(version_match.group(1))
     raise RuntimeError("Unable to find version string.")
 
-
 setup(
     name='django-comments-moderation',
     version=find_version('comments_moderation', '__init__.py'),
-    license='Apache License, Version 2.0',
+    license='GNU Affero General Public License, Version 3.0',
 
     install_requires=[
         'django-fluent-comments>=0.9.2',
     ],
     requires=[
-        'Django (>=1.3)',   # Using staticfiles
+        'Django (>=1.3)',
     ],
     description='Moderation plugin for django-fluent-comments',
     long_description=read('README.md'),
@@ -55,11 +54,11 @@ setup(
 
     zip_safe=False,
     classifiers=[
-        'Development Status :: 4 - Beta',
+        'Development Status :: 1 - Alpha',
         'Environment :: Web Environment',
         'Framework :: Django',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: Apache Software License',
+        'License :: OSI Approved :: Affero General Public License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2.6',

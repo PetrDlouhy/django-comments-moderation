@@ -6,3 +6,9 @@ from django.utils.translation import ugettext as _
 class EmailFilter(models.Model):
     email  = models.EmailField(verbose_name=_(u"Email"), null=True)
     active = models.BooleanField(help_text=_(u"Rule is active"))
+
+COMMENTS_MODERATION_MODES = (
+        ('strict', u"Strict"),
+        ('enabled', u"Enabled"),
+        ('disabled', u"Disabled")
+    )

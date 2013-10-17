@@ -1,4 +1,4 @@
-
+import os
 from django.utils.importlib import import_module
 
 
@@ -10,4 +10,4 @@ settings = import_module_attr(
     os.getenv('COMMENTS_MODERATION_SETTINGS_MODULE', 'django.conf.settings')
 )
 
-MODERATION_MODE = getattr(settings, 'COMMENTS_MODERATION_MODE', 'strict')
+MODERATION_MODE = getattr(settings, 'COMMENTS_MODERATION_MODE', 'approve')

@@ -4,11 +4,18 @@ from django.db import models
 from django.utils.translation import ugettext as _
 
 class EmailFilter(models.Model):
-    email  = models.EmailField(verbose_name=_(u"Email"), null=True)
-    active = models.BooleanField(help_text=_(u"Rule is active"))
+    RULE_CHOICES = (
+            ('moderate', _(u'Moderate all comments')),
+            ('approve', _(u'Approve all comments')),
+            ('new', _(u'New user')),
+        )
 
-COMMENTS_MODERATION_MODES = (
-        ('strict', u"Strict"),
-        ('enabled', u"Enabled"),
-        ('disabled', u"Disabled")
-    )
+    email  = models.EmailField(
+            verbose_name=_(u"Email"),
+            null=True
+            )
+    active = models.CharField(
+            max_length = 20,
+            help_text=_(u"Mode of moderation"),
+            choices=RULE_CHOICES, default = 'new'
+            )

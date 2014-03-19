@@ -42,7 +42,7 @@ setup(
         'Django (>=1.3)',
     ],
     description='Moderation plugin for django-fluent-comments',
-    long_description=read('README.md'),
+    long_description=read('README.rst'),
 
     author='Petr Dlouhý',
     author_email='petr.dlouhy@email.cz',
@@ -55,11 +55,11 @@ setup(
 
     zip_safe=False,
     classifiers=[
-        'Development Status :: 1 - Alpha',
+        'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
         'Framework :: Django',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: Affero General Public License',
+        'License :: OSI Approved :: GNU Affero General Public License v3',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2.6',

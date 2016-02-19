@@ -1,4 +1,4 @@
-from django.contrib.comments.moderation import CommentModerator, moderator
+from django_comments.moderation import CommentModerator, moderator
 from comments_moderation import settings
 from models import EmailFilter
 

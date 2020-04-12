@@ -1,5 +1,5 @@
 import os
-from django.utils.importlib import import_module
+from importlib import import_module
 
 
 def import_module_attr(path):

@@ -1,6 +1,6 @@
 from django_comments.moderation import CommentModerator, moderator
 from comments_moderation import settings
-from models import EmailFilter
+from .models import EmailFilter
 
 class FilteredCommentsModerator(CommentModerator):
     def moderate(self, comment, content_object, request):
